@@ -8,7 +8,6 @@ open ExceptionTool
 open Usage
 
 let rec run arglist =
-  // For subcommand based apps, split based on subcommand here
   match arglist with
   | "-v" :: rest ->
     verbose <- true
@@ -18,9 +17,6 @@ let rec run arglist =
   | [] ->
     usage verbose
     0  // program return status code to the operating system; 0 == "OK"
-  //  *EXAMPLE*:
-  //| "foo" :: rest ->
-  //  rest |> AppFoo.runFoo
   | _ :: _ ->
     arglist |> App.runApp
 

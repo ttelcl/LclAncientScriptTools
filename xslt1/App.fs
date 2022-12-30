@@ -72,6 +72,11 @@ let runApp args =
     let trx = new XslCompiledTransform()
     trx.Load(xslFile)
     trx
+  // Instead of trying to figure out if the output file equals the input,
+  // open the inputs read-only so trying to overwrite them will fail
+  // (in that case a *.tmp file is left instead).
+  use inputLock = File.OpenRead(o.XmlFile)
+  use scriptLock = File.OpenRead(o.XslFile)
   do
     use tw = o.OutFile |> startFile
     let arglist = new XsltArgumentList()
