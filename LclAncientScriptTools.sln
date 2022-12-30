@@ -3,12 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{EA69D88B-C037-4E70-8B6C-7327F70AF2C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7FD125C3-CC8F-4A65-BFD4-D1F083F3DDCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4EA75286-AF4C-48E8-89B0-DCB6182674B4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "xslt1", "xslt1\xslt1.fsproj", "{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E8E313E-AA0A-4BC0-B8F6-C43A182785E4} = {EA69D88B-C037-4E70-8B6C-7327F70AF2C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6163AA5-5D76-49C9-A259-F2476475A809}
 	EndGlobalSection
 EndGlobal
