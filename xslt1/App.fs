@@ -34,6 +34,10 @@ let private parseArgs args =
       rest |> parseMore {o with XslFile=xslFile}
     | "-o" :: outFile :: rest ->
       rest |> parseMore {o with OutFile=outFile}
+    | "-O" :: outExt :: rest ->
+      if outExt.StartsWith('.') |> not then
+        failwith "The argument to -O must start with a '.'"
+      rest |> parseMore {o with OutExt = outExt}
     | [] ->
       if o.XmlFile |> String.IsNullOrEmpty then
         failwith "No source document specified"
@@ -41,7 +45,7 @@ let private parseArgs args =
         if o.OutFile |> String.IsNullOrEmpty then
           let outExt =
             if o.OutExt |> String.IsNullOrEmpty then
-              ".xml"
+              ".out.xml"
             else
               o.OutExt
           {o with OutFile = Path.ChangeExtension(o.XmlFile, outExt)}

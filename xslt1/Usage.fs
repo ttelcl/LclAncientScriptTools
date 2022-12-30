@@ -15,7 +15,7 @@ let usage detailed =
   cp "The output name is determined as follows:"
   cp "- If '\fg-o\f0' is given: its argument"
   cp "- Otherwise, if '\fg-O\f0' is given: the data file with the extension changed"
-  cp "- Otherwise: act as if '\fg-O \fc.xml\f0' was given"
+  cp "- Otherwise: act as if '\fg-O \fc.out.xml\f0' was given"
   
   
 
